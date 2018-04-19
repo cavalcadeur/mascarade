@@ -1,0 +1,11 @@
+[
+	["load","9h32 bureau du héros.","lettre","void","heros","void"],
+	["text","lettre","Chère nom du héros,"],
+	["text","lettre","Il est temps de finir ton entraînement. Rejoins moi dès aujourd’hui au tribunal."],
+	["text","lettre","Tu vas enfin pouvoir mener ta première vraie enquête. Je compte sur toi pour être là dans les temps."],
+	["text","heros","(Une enquête rien que pour moi ? Humm... On dirait que le vieux grincheux me prend enfin au sérieux.)"],
+	["text","heros","(Parfait ! C’est l’occasion de lui montrer ce que je vaux vraiment.)"],
+	["load","10h43 tribunal.","juge2","bureau_juge_test","heros","void"],
+	["text","juge2","SILENCE DANS LA SALLE !"],
+	["text","juge2","Il est temps de finir ton entraînement. Rejoins moi dès aujourd’hui au tribunal."]
+]

@@ -1,0 +1,30 @@
+// Module contenant la fonction de dessin.
+
+var Draw = function(){
+    
+
+
+
+    return {
+
+        start: function(name,invent,graphique){
+            
+        },
+
+        load: function(){
+            
+        },
+
+        show: function(){
+            
+        },
+
+        alert: function(msg){
+            
+        }
+
+
+
+
+    };
+};

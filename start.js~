@@ -1,0 +1,90 @@
+var W,H;
+var ctx,canvas,audioCtx,decor,canvasFond;
+
+
+
+//donnee
+
+
+// programme
+
+function rnd(max){
+    return Math.floor(Math.floor(Math.random()*max));
+}
+
+function charge(){
+    alert("Voici ton monde C, fais en bonne usage.");
+    animation();
+}
+
+function resize(){
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.setAttribute("width",W);
+    canvas.setAttribute("height",H);
+}
+
+function move(x,y){
+
+}
+
+function click(x,y){
+
+}
+
+function start(){
+    canvas = document.querySelector("#canvas");
+    ctx = canvas.getContext("2d");
+    W = canvas.width;
+    H = canvas.height;
+    resize();
+    document.addEventListener(
+        "mousemove",
+        function (event){
+            event.preventDefault();
+            event.stopPropagation();
+            var x = event.clientX;
+            var y = event.clientY;
+            move(x,y);
+        }
+    );
+    document.addEventListener(
+        "mousedown",
+        function (event){
+            event.preventDefault();
+            event.stopPropagation();
+            var x = event.clientX;
+            var y = event.clientY;
+            click(x,y);
+        }
+    );
+    charge();
+}
+
+function animation(){
+    var f = function(t) {
+        paint();
+        window.requestAnimationFrame(f);
+    };
+    window.requestAnimationFrame(f);
+}
+
+function paint(){
+    draw();
+}
+
+function draw() {
+    ctx.fillStyle = lieu.color;
+    ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = lieu.sol;
+    ctx.fillRect(0,H/3,W,H/3*2);
+    ctx.fillStyle = "rgb(0,0,0)";
+    ctx.fillRect(0,H/3,W,2);
+    drawHero(W/2,H/3*2,0);
+}
+
+function drawHero(x,y,n){
+    ctx.drawImage(img[heros[n].metier],x-35,y-100);
+    ctx.drawImage(img[heros[n].race],x-35,y-100);
+    ctx.drawImage(img[heros[n].yeux[0]],x-35,y-100);
+}
